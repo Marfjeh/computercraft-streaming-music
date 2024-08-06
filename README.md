@@ -25,3 +25,10 @@ If you understand the warning, then you can proceed.
 3. then execute `npm start`
 
 
+You can also use docker, you have to build the image yourself first.
+
+1. clone this repo and cd in the directory and to functions. 
+2. build the docker image with: `docker build -t ccmusic .`
+3. run the docker container forexample: `docker run -d --name ccmusic -p 8080:3000 ccmusic`
+
+This will run the docker container, and listen on port 8080.
