@@ -13,14 +13,15 @@
 
 ## How to self-host
 
-The ComputerCraft program connects to a web server to download the music files. This server is hosted with Firebase Cloud Functions.
+The ComputerCraft program connects to a web server to download the music files.
 
-1. Download this repository to your computer into a folder.
-2. Sign up for Firebase and make a new project at [https://firebase.google.com/](https://firebase.google.com/). A billing account is required even for the free plan. The limits of the free plan should be plenty for most people.
-3. Install Node.js version 20 from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-4. In your terminal, run `npm install -g firebase-tools` to install Firebase.
-5. In your terminal, navigate inside the project folder. Run `firebase login` and follow the steps.
-6. Run `firebase init functions` and follow the steps. Choose JavaScript. Don't choose to overwrite the `functions/index.js` file. Install the dependencies when prompted.
-7. Run `cd functions` to go inside the `functions` directory and then run `npm install` to install more dependencies.
-8. Run `cd ..` to go back and then run `firebase deploy` to deploy your new Cloud Function.
-9. After the deployment is complete it will give you the Function URL. Copy that URL into the first line of `music.lua`.
+### Note: make sure if you are using this locally, that you configured computercraft to connect localhost if you run it on the same machine as where the game / server runs.
+### ! allowing localhost is a security breach if used on a public minecraft server. i suggest you running this on a simple VPS instead, or use the orginial code and run it on firebase.
+
+If you understand the warning, then you can proceed.
+
+1. clone this repo and cd in the directory and to functions. 
+2. execute npm install to install the dependencies.
+3. then execute `npm start`
+
+
