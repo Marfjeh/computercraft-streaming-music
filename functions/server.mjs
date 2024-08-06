@@ -15,7 +15,7 @@ const ytmusic = new YTMusic();
   await ytmusic.initialize();
 })();
 
-app.get('/ipod', (req, res) => {
+app.get('/', (req, res) => {
   if (req.query.id) {
     // Download youtube video and convert to dfpwm
     return new Promise((resolve, reject) => {
@@ -125,6 +125,6 @@ app.get('/ipod', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at port ${port}`);
 });
 
